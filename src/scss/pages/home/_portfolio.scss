@@ -1,0 +1,74 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+
+#portfolio{
+    background-color: $primary-color;
+    .container{
+        .main-text{
+            @include Flex($align:center,$justify:space-between);
+            &__left{
+                @include Flex($direction:column,$gap:1rem);
+                &__headline{
+                    @extend %headline;
+                    color:$orange-color;
+                }
+                &__heading{
+                    @extend %heading;
+                    color:#fff;
+                }
+            }
+            button{
+                @extend %button;
+                @include Text($color:#fff,$bg-color:transparent);
+                border:1px solid #fff;
+                @include Transition($minute:.3s);
+                i{
+                    margin-left: 0.5rem;
+                }
+                &:hover{
+                    background-color: $orange-color;
+                    border-color: $orange-color;
+                }
+            }
+        }
+        .row{
+            .card{
+                @include Border($border:none,$border-radius:3rem);
+                .img-container{
+                    overflow: hidden;
+                    img{
+                        @include Transition($minute:.3s);
+                    }
+                    &:hover{
+                        img{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .text{
+                    @include Flex($direction:column,$gap:1rem);
+                    padding:3rem;
+                    &__headline{
+                        @extend %headline;
+                        @include Text($color:$purple-color,$font-size:1.3rem);
+                        @include Transition($minute:.3s);
+                        cursor: pointer;
+                        &:hover{
+                            color:$orange-color;
+                        }
+                    }
+                    &__heading{
+                        @extend %heading;
+                        @include Text($color:$primary-color,$font-size:2.3rem,$text-transform:capitalize,$line-height:2.5rem);
+                        @include Transition($minute:.3s);
+                        cursor: pointer;
+                        &:hover{
+                            color:$orange-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
