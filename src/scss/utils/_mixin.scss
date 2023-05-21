@@ -1,0 +1,34 @@
+@mixin Flex($align:null,$justify:null,$direction:null,$wrap:null,$gap:null,$align-content:null){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap:$gap;
+    align-content: $align-content;
+}
+@mixin Transition($minute){
+    transition: $minute ease-in-out;
+}
+@mixin Text($color:null,$bg-color:null,$font-size:null,$font-weight:null,$text-transform:null,$max-width:null,$text-decoration:null,$line-height:null,$text-align:null){
+    color:$color;
+    background-color: $bg-color;
+    font-size:$font-size;
+    font-weight: $font-weight;
+    text-transform: $text-transform;
+    max-width: $max-width;
+    text-decoration: $text-decoration;
+    line-height: $line-height;
+    text-align: $text-align;
+}
+@mixin Position($position:null,$top:null,$bottom:null,$left:null,$right:null){
+    position: $position;
+    top:$top;
+    bottom:$bottom;
+    left:$left;
+    right:$right;
+}
+@mixin Border($border:null,$border-radius:null){
+    border: $border;
+    border-radius: $border-radius;
+}

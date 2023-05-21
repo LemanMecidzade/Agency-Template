@@ -1,0 +1,57 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+
+#home{
+    .container{
+        .row{
+            align-items: center;
+            .text{
+                @include Flex($direction:column,$gap:3rem);
+                &__heading{
+                    @include Text($color:$primary-color,$font-size:8rem,$font-weight:600,$text-transform:capitalize,$line-height:9rem);
+                }
+                &__paragraph{
+                    @include Text($color:$secondary-color,$font-size:2rem,$line-height:3rem);
+                }
+                &__button{
+                    margin-top: 1rem;
+                    @include Flex($align:center,$gap:3rem);
+                    button{
+                        @include Text($color:#fff,$bg-color:$purple-color);
+                        @extend %button;
+                        &:hover{
+                            background-color: $orange-color;
+                        }
+                    }
+                    a{
+                        @include Text($color:$primary-color,$font-size:1.8rem,$font-weight:600,$text-transform:capitalize,$text-decoration:none);
+                        i{
+                            margin-right: 1rem;
+                            color:$purple-color;
+                            @include Border($border:1px solid $purple-color,$border-radius:1rem);
+                            padding:2rem 2.7rem;
+                        }
+                        &:hover{
+                            color:$orange-color;
+                           i{
+                            &:hover{
+                                color:$orange-color;
+                                border-color: $orange-color;
+                            }
+                           }
+                        }
+                    }
+                }
+            }
+            .img-container{
+                position: relative;
+                .circle{
+                    @include Position($position:absolute,$top:50%,$left:43%);
+                    transform: translate(-50%,-50%);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}

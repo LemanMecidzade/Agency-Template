@@ -1,0 +1,39 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+
+nav{
+    background: transparent;
+    .container{
+        .row{
+            align-items: center;
+            .menu{
+                @include Flex($align:center,$gap:5rem,$justify:center);
+                a{
+                    @include Text($color:$primary-color,$font-size:1.6rem,$font-weight:600,$text-decoration:none);
+                    @include Transition($minute:.3s);
+                    &:hover{
+                        color:$purple-color;
+                    }
+                }
+            }
+            .icons{
+                @include Flex($align:center,$gap:4rem,$justify:end);
+                i{
+                    @include Text($color:$primary-color,$font-size:1.6rem);
+                    cursor: pointer;
+                }
+                .fa-magnifying-glass{
+                    @include Transition($minute:.3s);
+                    &:hover{
+                        color:$purple-color;
+                    }
+                }
+                .fa-bars{
+                    @include Text($color:#fff,$bg-color:$purple-color);
+                    padding:2rem;
+                    @include Border($border-radius:50%);
+                }
+            }
+        }
+    }
+}

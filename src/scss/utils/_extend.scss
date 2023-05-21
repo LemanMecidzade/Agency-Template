@@ -1,0 +1,9 @@
+@use "./variables" as *;
+@use "./mixin" as *;
+
+%button{
+    @include Text($font-size:1.8rem,$font-weight:600,$text-transform:capitalize);
+    @include Border($border:none,$border-radius:1rem);
+    @include Transition($minute:.3s);
+    padding: 2rem 2.5rem;
+}
