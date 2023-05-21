@@ -1,0 +1,63 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+
+#form{
+    background-color: $purple-color;
+    .container{
+        .row{
+            align-items: center;
+            .text{
+                @include Flex($direction:column,$gap:2rem);
+                &__headline{
+                    @extend %headline;
+                    color:$orange-color;
+                }
+                &__heading{
+                    @extend %heading;
+                    color:#fff;
+                }
+                &__paragraph{
+                    @extend %paragraph;
+                    color:lightgray;
+                }
+                .input-group{
+                    @include Flex($align:center);
+                    input{
+                        width: 100%;
+                        @include Border($border:none,$border-radius:0.5rem);
+                        @include Text($color:#fff,$bg-color:#FFFFFF12,$font-size:1.6rem);
+                        outline:none;
+                        padding:2rem 1.5rem;
+                        font-family: $default-font;
+                        &::placeholder{
+                            color:#ffffffc7;
+                        }
+                    }
+                    .message{
+                        padding:4rem 1.5rem;
+                    }
+                    button{
+                        @extend %button;
+                        width:100%;
+                        @include Text($color:#fff,$bg-color:$orange-color,$text-transform:uppercase);
+                        @include Transition($minute:.3s);
+                        &:hover{
+                            @include Text($color:$orange-color,$bg-color:#fff);
+                        }
+                    }
+                    span{
+                        margin-left: 3rem;
+                        @include Text($color:#fff,$font-size:2.2rem,$font-weight:600);
+                        i{
+                            transform: translateX(-2rem);
+                            @include Text($color:$orange-color,$bg-color:#fff);
+                            padding:2rem;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

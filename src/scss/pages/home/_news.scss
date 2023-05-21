@@ -1,0 +1,72 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+
+#news{
+    background-color: #E5E5E5;
+    .container{
+        .text{
+            @include Flex($align:center,$justify:center,$direction:column,$gap:1rem);
+            &__headline{
+                @extend %headline;
+                color:$purple-color;
+            }
+            &__heading{
+                @extend %heading;
+            }
+        }
+        .row{
+            .card{
+                @include Border($border:none,$border-radius:2rem);
+                @include Flex($align:center,$gap:3rem);
+                padding:2rem;
+                .img-container{
+                    width:340px;
+                    img{
+                        border-radius: 2rem;
+                    }
+                }
+                .info{
+                    width: 100%;
+                    @include Flex($align:center,$justify:space-around);
+                    border-bottom: 1px solid lightgray;
+                    padding-bottom: 2rem;
+                    a{
+                        @include Text($color:$primary-color,$font-size:1.3rem);
+                        @include Transition($minute:.3s);
+                        cursor: pointer;
+                        i{
+                            margin-left: 0.5rem;
+                        }
+                        &:hover{
+                            color:$purple-color;
+                        }
+                    }
+                }
+                .text{
+                    &__heading{
+                        @include Text($font-size:2.3rem,$font-weight:500,$text-transform:null,$max-width:null,$text-decoration:null,$line-height:3.3rem,$text-align:center);
+                        @include Transition($minute:.3s);
+                        cursor: pointer;
+                        &:hover{
+                            color:$orange-color;
+                        }
+                    }
+                    &__more{
+                        @extend .text__heading;
+                        @include Text($font-size:1.5rem,$text-decoration:none);
+                        i{
+                            transform: translateX(0.5rem);
+                            transition: transform 0.3s;
+                        }
+                        &:hover{
+                            i{
+                                transform: translateX(1rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

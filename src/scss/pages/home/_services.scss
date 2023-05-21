@@ -46,7 +46,7 @@
                         @include Transition($minute:.3s);
                         i{
                             transform: translateX(0.5rem);
-                            @include Transition($minute:.2s);
+                            transition: transform .3s ease-in-out;
                         }
                         &:hover{
                             color:$purple-color;

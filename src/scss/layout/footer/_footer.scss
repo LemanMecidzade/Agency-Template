@@ -1,0 +1,73 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+
+footer{
+    background-color: $primary-color;
+    .container{
+        .row{
+            .info{
+                @include Flex($direction:column,$gap:3rem);
+                .logo{
+                    width: 130px;
+                }
+                .email{
+                    @include Flex($direction:column,$gap:1.5rem);
+                    h1{
+                        @include Text($color:#fff,$font-size:1.3rem);
+                    }
+                    input{
+                        @include Border($border:none,$border-radius:0.5rem);
+                        padding: 1.5rem 2rem;
+                        font-size: 1.3rem;
+                        font-family: $default-font;
+                        outline: none
+                    }
+                    button{
+                        @extend %button;
+                        @include Text($color:#fff,$bg-color:$purple-color,$font-size:1.5rem);
+                        @include Transition($minute:.3s);
+                        width: 60%;
+                        &:hover{
+                            background-color: $orange-color;
+                        }
+                    }
+                }
+                .media{
+                    @include Flex($justify:space-between);
+                    i{
+                        @include Text($color:#fff,$bg-color:$secondary-color,$font-size:1.4rem);
+                        padding: 2rem;
+                        cursor: pointer;
+                        border-radius: 0.5rem;
+                        @include Transition($minute:.3s);
+                        &:hover{
+                            background-color: $orange-color;
+                        }
+                    }
+                }
+            }
+            .menu{
+                h1{
+                    @include Text($color:#fff,$font-size:2rem,$font-weight:600);
+                }
+                ul{
+                    margin-top: 5rem;
+                    @include Flex($direction:column,$gap:2.5rem);
+                    a{
+                        @include Text($color:#fff,$font-size:1.5rem,$text-decoration:none);
+                        @include Transition($minute:.3s);
+                        &:hover{
+                            color:$orange-color;
+                        }
+                    }
+                }
+            }
+        }
+        .copyright{
+            @include Text($color:#fff,$font-size:1.5rem);
+            border-top: 1px solid #d3d3d348;
+            padding-top: 3rem;
+        }
+    }
+}

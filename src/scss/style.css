@@ -59,7 +59,7 @@ html {
   box-sizing: border-box;
 }
 
-#portfolio .container .main-text button, #about .container .row .text button, #home .container .row .text__button button {
+footer .container .row .info .email button, #form .container .row .text .input-group button, #portfolio .container .main-text button, #about .container .row .text button, #home .container .row .text__button button {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: capitalize;
@@ -70,20 +70,20 @@ html {
   width: 30%;
 }
 
-#testimonial .container .text__headline, #work-process .container .row .text__headline, #portfolio .container .main-text__left__headline, #portfolio .container .row .card .text__headline, #about .container .row .text__headline, #services .container .main-text__headline {
+#form .container .row .text__headline, #news .container .text__headline, #testimonial .container .text__headline, #work-process .container .row .text__headline, #portfolio .container .main-text__left__headline, #portfolio .container .row .card .text__headline, #about .container .row .text__headline, #services .container .main-text__headline {
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-#testimonial .container .text__heading, #work-process .container .row .text__heading, #portfolio .container .main-text__left__heading, #portfolio .container .row .card .text__heading, #about .container .row .text__heading, #services .container .main-text__heading {
+#form .container .row .text__heading, #news .container .text__heading, #news .container .row .card .text__more, #testimonial .container .text__heading, #work-process .container .row .text__heading, #portfolio .container .main-text__left__heading, #portfolio .container .row .card .text__heading, #about .container .row .text__heading, #services .container .main-text__heading {
   color: #19082D;
   font-size: 4.5rem;
   font-weight: 600;
   line-height: 5.5rem;
 }
 
-#testimonial .container .row .card__paragraph, #about .container .row .text__paragraph {
+#form .container .row .text__paragraph, #testimonial .container .row .card__paragraph, #about .container .row .text__paragraph {
   color: #3E3E3E;
   font-size: 1.8rem;
   line-height: 2.8rem;
@@ -299,7 +299,7 @@ nav .container .row .icons .fa-bars {
 }
 #services .container .row .card .card-text__read-more i {
   transform: translateX(0.5rem);
-  transition: 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 #services .container .row .card .card-text__read-more:hover {
   color: #6722B5;
@@ -538,4 +538,224 @@ nav .container .row .icons .fa-bars {
 }
 #partners .container .row .icon:hover .hover {
   transform: translateY(-32px);
+}
+
+#news {
+  background-color: #E5E5E5;
+}
+#news .container .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#news .container .text__headline {
+  color: #6722B5;
+}
+#news .container .row .card {
+  border: none;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+#news .container .row .card .img-container {
+  width: 340px;
+}
+#news .container .row .card .img-container img {
+  border-radius: 2rem;
+}
+#news .container .row .card .info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 2rem;
+}
+#news .container .row .card .info a {
+  color: #19082D;
+  font-size: 1.3rem;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+#news .container .row .card .info a i {
+  margin-left: 0.5rem;
+}
+#news .container .row .card .info a:hover {
+  color: #6722B5;
+}
+#news .container .row .card .text__heading, #news .container .row .card .text__more {
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 3.3rem;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+#news .container .row .card .text__heading:hover, #news .container .row .card .text__more:hover {
+  color: #FF7425;
+}
+#news .container .row .card .text__more {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+#news .container .row .card .text__more i {
+  transform: translateX(0.5rem);
+  transition: transform 0.3s;
+}
+#news .container .row .card .text__more:hover i {
+  transform: translateX(1rem);
+}
+
+#form {
+  background-color: #6722B5;
+}
+#form .container .row {
+  align-items: center;
+}
+#form .container .row .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#form .container .row .text__headline {
+  color: #FF7425;
+}
+#form .container .row .text__heading {
+  color: #fff;
+}
+#form .container .row .text__paragraph {
+  color: lightgray;
+}
+#form .container .row .text .input-group {
+  display: flex;
+  align-items: center;
+}
+#form .container .row .text .input-group input {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.0705882353);
+  font-size: 1.6rem;
+  outline: none;
+  padding: 2rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+#form .container .row .text .input-group input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7803921569);
+}
+#form .container .row .text .input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.7803921569);
+}
+#form .container .row .text .input-group .message {
+  padding: 4rem 1.5rem;
+}
+#form .container .row .text .input-group button {
+  width: 100%;
+  color: #fff;
+  background-color: #FF7425;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+#form .container .row .text .input-group button:hover {
+  color: #FF7425;
+  background-color: #fff;
+}
+#form .container .row .text .input-group span {
+  margin-left: 3rem;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+#form .container .row .text .input-group span i {
+  transform: translateX(-2rem);
+  color: #FF7425;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: #19082D;
+}
+footer .container .row .info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+footer .container .row .info .logo {
+  width: 130px;
+}
+footer .container .row .info .email {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+footer .container .row .info .email h1 {
+  color: #fff;
+  font-size: 1.3rem;
+}
+footer .container .row .info .email input {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+footer .container .row .info .email button {
+  color: #fff;
+  background-color: #6722B5;
+  font-size: 1.5rem;
+  transition: 0.3s ease-in-out;
+  width: 60%;
+}
+footer .container .row .info .email button:hover {
+  background-color: #FF7425;
+}
+footer .container .row .info .media {
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .row .info .media i {
+  color: #fff;
+  background-color: #3E3E3E;
+  font-size: 1.4rem;
+  padding: 2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+footer .container .row .info .media i:hover {
+  background-color: #FF7425;
+}
+footer .container .row .menu h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+footer .container .row .menu ul {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+footer .container .row .menu ul a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+footer .container .row .menu ul a:hover {
+  color: #FF7425;
+}
+footer .container .copyright {
+  color: #fff;
+  font-size: 1.5rem;
+  border-top: 1px solid rgba(211, 211, 211, 0.2823529412);
+  padding-top: 3rem;
 }/*# sourceMappingURL=style.css.map */
