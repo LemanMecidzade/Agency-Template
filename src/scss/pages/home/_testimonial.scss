@@ -1,0 +1,55 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+
+#testimonial{
+    .container{
+        .text{
+            &__headline{
+                @extend %headline;
+                color:$orange-color;
+            }
+            &__heading{
+                @extend %heading;
+                margin-top: 1rem;
+            }
+        }
+        .row{
+            .card{
+                @include Flex($direction:column,$gap:3rem);
+                @include Transition($minute:.3s);
+                @include Border($border:none,$border-radius:2rem);
+                padding:4rem 3rem;
+                box-shadow: 0 0 5px 20px #f0f0f031;
+                cursor: pointer;
+                i{
+                    @include Text($color:$purple-color,$font-size:5rem,$font-weight:600);
+                }
+                &__paragraph{
+                    @extend %paragraph;
+                }
+                &__bottom{
+                    @include Flex($align:center,$gap:3rem);
+                    .img-container{
+                        width:60px;
+                    }
+                    .about{
+                        @include Flex($direction:column,$justify:center,$gap:1rem);
+                        h1{
+                            @include Text($color:$primary-color,$font-size:1.5rem,$font-weight:600);
+                        }
+                        h3{
+                            @include Text($color:lightgray,$font-size:1.3rem);
+                        }
+                    }
+                }
+                &:hover{
+                    box-shadow:0 0 20px 20px #f0f0f081;
+                    i{
+                        color:$primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

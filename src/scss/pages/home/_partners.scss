@@ -1,0 +1,26 @@
+#partners{
+    .container{
+        .row{
+            .icon{
+                height:30px;
+                cursor: pointer;
+                overflow: hidden;
+                .default{
+                    transform: translate(0);
+                    @include Transition($minute:.3s);
+                }
+                .hover{
+                    @extend .default;
+                }
+                &:hover{
+                    .default{
+                        transform: translateY(-30px);
+                    }
+                    .hover{
+                        transform: translateY(-32px);
+                    }
+                }
+            }
+        }
+    }
+}

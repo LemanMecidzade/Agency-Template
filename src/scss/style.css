@@ -70,20 +70,20 @@ html {
   width: 30%;
 }
 
-#portfolio .container .main-text__left__headline, #portfolio .container .row .card .text__headline, #about .container .row .text__headline, #services .container .main-text__headline {
+#testimonial .container .text__headline, #work-process .container .row .text__headline, #portfolio .container .main-text__left__headline, #portfolio .container .row .card .text__headline, #about .container .row .text__headline, #services .container .main-text__headline {
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-#portfolio .container .main-text__left__heading, #portfolio .container .row .card .text__heading, #about .container .row .text__heading, #services .container .main-text__heading {
+#testimonial .container .text__heading, #work-process .container .row .text__heading, #portfolio .container .main-text__left__heading, #portfolio .container .row .card .text__heading, #about .container .row .text__heading, #services .container .main-text__heading {
   color: #19082D;
   font-size: 4.5rem;
   font-weight: 600;
   line-height: 5.5rem;
 }
 
-#about .container .row .text__paragraph {
+#testimonial .container .row .card__paragraph, #about .container .row .text__paragraph {
   color: #3E3E3E;
   font-size: 1.8rem;
   line-height: 2.8rem;
@@ -432,4 +432,110 @@ nav .container .row .icons .fa-bars {
 }
 #portfolio .container .row .card .text__heading:hover {
   color: #FF7425;
+}
+
+#work-process .container .row {
+  align-items: center;
+}
+#work-process .container .row .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#work-process .container .row .text__headline {
+  color: #6722B5;
+}
+#work-process .container .row .text__heading {
+  max-width: 60rem;
+}
+#work-process .container .row .accordion .accordion-item {
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 15px rgba(240, 240, 240, 0.4941176471);
+  margin-top: 2rem;
+}
+#work-process .container .row .accordion .accordion-item button {
+  color: #19082D;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+}
+#work-process .container .row .accordion .accordion-item button:hover {
+  color: #FF7425;
+}
+#work-process .container .row .accordion .accordion-item .accordion-body {
+  padding: 1.5rem;
+  color: #3E3E3E;
+  font-size: 1.5rem;
+}
+
+#testimonial .container .text__headline {
+  color: #FF7425;
+}
+#testimonial .container .text__heading {
+  margin-top: 1rem;
+}
+#testimonial .container .row .card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  transition: 0.3s ease-in-out;
+  border: none;
+  border-radius: 2rem;
+  padding: 4rem 3rem;
+  box-shadow: 0 0 5px 20px rgba(240, 240, 240, 0.1921568627);
+  cursor: pointer;
+}
+#testimonial .container .row .card i {
+  color: #6722B5;
+  font-size: 5rem;
+  font-weight: 600;
+}
+#testimonial .container .row .card__bottom {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+#testimonial .container .row .card__bottom .img-container {
+  width: 60px;
+}
+#testimonial .container .row .card__bottom .about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#testimonial .container .row .card__bottom .about h1 {
+  color: #19082D;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#testimonial .container .row .card__bottom .about h3 {
+  color: lightgray;
+  font-size: 1.3rem;
+}
+#testimonial .container .row .card:hover {
+  box-shadow: 0 0 20px 20px rgba(240, 240, 240, 0.5058823529);
+}
+#testimonial .container .row .card:hover i {
+  color: #19082D;
+}
+
+#partners .container .row .icon {
+  height: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+#partners .container .row .icon .default, #partners .container .row .icon .hover {
+  transform: translate(0);
+  transition: 0.3s ease-in-out;
+}
+#partners .container .row .icon:hover .default, #partners .container .row .icon:hover .hover {
+  transform: translateY(-30px);
+}
+#partners .container .row .icon:hover .hover {
+  transform: translateY(-32px);
 }/*# sourceMappingURL=style.css.map */

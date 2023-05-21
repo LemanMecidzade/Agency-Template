@@ -1,0 +1,42 @@
+@use "../../utils/variables" as *;
+@use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
+
+#work-process{
+    .container{
+        .row{
+            align-items: center;
+            .text{
+                @include Flex($direction:column,$gap:2rem);
+                &__headline{
+                    @extend %headline;
+                    color:$purple-color;
+                }
+                &__heading{
+                    @extend %heading;
+                    max-width: 60rem;
+                }
+            }
+            .accordion{
+                .accordion-item{
+                    @include Border ($border:none,$border-radius:2rem);
+                    box-shadow: 0 0 10px 15px #f0f0f07e;
+                    margin-top: 2rem;
+                    button{
+                        @include Text($color:$primary-color,$font-size:2rem,$bg-color:transparent);
+                        padding:2rem;
+                        @include Border($border:none,$border-radius:1rem);
+                        @include Transition($minute:.3s);
+                        &:hover{
+                            color:$orange-color;
+                        }
+                    }
+                    .accordion-body{
+                        padding: 1.5rem;
+                        @include Text($color:$secondary-color,$font-size:1.5rem);
+                    }
+                }
+            }
+        }
+    }
+}
