@@ -59,7 +59,7 @@ html {
   box-sizing: border-box;
 }
 
-footer .container .row .info .email button, #form .container .row .text .input-group button, #portfolio .container .main-text button, #about .container .row .text button, #home .container .row .text__button button {
+footer .container .row .info .email button, #form .container .row .text .input-group button, #portfolio .container .main-text button, #about .container .row .text button, #home .container .row .text__button button, nav .container .row .menu .modal-content .row .login button, nav .container .row .menu .modal-content .row .registration button {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: capitalize;
@@ -83,7 +83,7 @@ footer .container .row .info .email button, #form .container .row .text .input-g
   line-height: 5.5rem;
 }
 
-#form .container .row .text__paragraph, #testimonial .container .row .card__paragraph, #about .container .row .text__paragraph {
+#form .container .row .text__paragraph, #testimonial .container .row .card__paragraph, #about .container .row .text__paragraph, nav .container .row .offcanvas .about .paragraph {
   color: #3E3E3E;
   font-size: 1.8rem;
   line-height: 2.8rem;
@@ -144,6 +144,85 @@ nav .container .row .menu a {
 nav .container .row .menu a:hover {
   color: #6722B5;
 }
+nav .container .row .menu .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem;
+}
+nav .container .row .menu .modal-content button {
+  align-self: flex-end;
+  color: #19082D;
+  font-size: 1.4rem;
+}
+nav .container .row .menu .modal-content .row {
+  align-items: start;
+}
+nav .container .row .menu .modal-content .row .login, nav .container .row .menu .modal-content .row .registration {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+nav .container .row .menu .modal-content .row .login h1, nav .container .row .menu .modal-content .row .registration h1 {
+  color: #6722B5;
+  font-size: 2rem;
+  font-weight: 600;
+}
+nav .container .row .menu .modal-content .row .login .form, nav .container .row .menu .modal-content .row .registration .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+nav .container .row .menu .modal-content .row .login .form input, nav .container .row .menu .modal-content .row .registration .form input {
+  border: 1px solid #6722B5;
+  border-radius: 0.5rem;
+  color: #6722B5;
+  background-color: transparent;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+nav .container .row .menu .modal-content .row .login .form input::-moz-placeholder, nav .container .row .menu .modal-content .row .registration .form input::-moz-placeholder {
+  color: #6722B5;
+}
+nav .container .row .menu .modal-content .row .login .form input::placeholder, nav .container .row .menu .modal-content .row .registration .form input::placeholder {
+  color: #6722B5;
+}
+nav .container .row .menu .modal-content .row .login .form .remember-forget, nav .container .row .menu .modal-content .row .registration .form .remember-forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .container .row .menu .modal-content .row .login .form .remember-forget .check-box label, nav .container .row .menu .modal-content .row .registration .form .remember-forget .check-box label {
+  color: #19082D;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+nav .container .row .menu .modal-content .row .login .form .remember-forget span, nav .container .row .menu .modal-content .row .registration .form .remember-forget span {
+  color: #19082D;
+  font-size: 1rem;
+  cursor: pointer;
+}
+nav .container .row .menu .modal-content .row .login .form .remember-forget span:hover, nav .container .row .menu .modal-content .row .registration .form .remember-forget span:hover {
+  color: #6722B5;
+  text-decoration: underline;
+}
+nav .container .row .menu .modal-content .row .login button, nav .container .row .menu .modal-content .row .registration button {
+  width: 100%;
+  color: #fff;
+  background-color: #6722B5;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+nav .container .row .menu .modal-content .row .login button:hover, nav .container .row .menu .modal-content .row .registration button:hover {
+  background-color: #FF7425;
+}
+nav .container .row .menu .modal-content .row .registration .check-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 nav .container .row .icons {
   display: flex;
   align-items: center;
@@ -166,6 +245,82 @@ nav .container .row .icons .fa-bars {
   background-color: #6722B5;
   padding: 2rem;
   border-radius: 50%;
+}
+nav .container .row .offcanvas {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 3rem;
+  overflow: auto;
+}
+nav .container .row .offcanvas button {
+  color: #19082D;
+  font-size: 2.3rem;
+  transition: 0.3s ease-in-out;
+  align-self: end;
+}
+nav .container .row .offcanvas button:hover {
+  color: #6722B5;
+}
+nav .container .row .offcanvas .about .img-container {
+  width: 140px;
+}
+nav .container .row .offcanvas .about .paragraph {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+}
+nav .container .row .offcanvas .get-in-touch {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 5rem 0;
+}
+nav .container .row .offcanvas .get-in-touch h1 {
+  color: #19082D;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+nav .container .row .offcanvas .get-in-touch .contact {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav .container .row .offcanvas .get-in-touch .contact i {
+  color: #fff;
+  background-color: #6722B5;
+  font-size: 1.8rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+nav .container .row .offcanvas .get-in-touch .contact .text__headline {
+  color: #3E3E3E;
+  font-size: 1.5rem;
+}
+nav .container .row .offcanvas .get-in-touch .contact .text__heading {
+  margin-top: 1rem;
+  color: #19082D;
+  font-size: 1.7rem;
+  transition: 0.3s ease-in-out;
+}
+nav .container .row .offcanvas .get-in-touch .contact .text__heading:hover {
+  color: #6722B5;
+}
+nav .container .row .offcanvas .media {
+  display: flex;
+  gap: 1.5rem;
+}
+nav .container .row .offcanvas .media i {
+  color: #19082D;
+  background-color: lightgray;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+nav .container .row .offcanvas .media i:hover {
+  color: #fff;
+  background-color: #6722B5;
 }
 
 #home .container .row {
@@ -397,15 +552,13 @@ nav .container .row .icons .fa-bars {
 #portfolio .container .row .card {
   border: none;
   border-radius: 3rem;
+  overflow: hidden;
 }
 #portfolio .container .row .card .img-container {
   overflow: hidden;
 }
 #portfolio .container .row .card .img-container img {
   transition: 0.3s ease-in-out;
-}
-#portfolio .container .row .card .img-container:hover img {
-  transform: scale(1.1);
 }
 #portfolio .container .row .card .text {
   display: flex;
@@ -432,6 +585,9 @@ nav .container .row .icons .fa-bars {
 }
 #portfolio .container .row .card .text__heading:hover {
   color: #FF7425;
+}
+#portfolio .container .row .card:hover img {
+  transform: scale(1.1);
 }
 
 #work-process .container .row {

@@ -35,15 +35,11 @@
         .row{
             .card{
                 @include Border($border:none,$border-radius:3rem);
+                overflow: hidden;
                 .img-container{
                     overflow: hidden;
                     img{
                         @include Transition($minute:.3s);
-                    }
-                    &:hover{
-                        img{
-                            transform: scale(1.1);
-                        }
                     }
                 }
                 .text{
@@ -66,6 +62,11 @@
                         &:hover{
                             color:$orange-color;
                         }
+                    }
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
                     }
                 }
             }

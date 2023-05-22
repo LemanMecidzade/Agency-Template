@@ -1,5 +1,6 @@
 @use "../../utils/variables" as *;
 @use "../../utils/mixin" as *;
+@use "../../utils/extend" as *;
 
 nav{
     background: transparent;
@@ -13,6 +14,67 @@ nav{
                     @include Transition($minute:.3s);
                     &:hover{
                         color:$purple-color;
+                    }
+                }
+                .modal-content{
+                    @include Flex($direction:column,$gap:4rem);
+                    padding: 3rem;
+                    button{
+                        align-self: flex-end;
+                        @include Text($color:$primary-color,$font-size:1.4rem);
+                    }
+                    .row{
+                        align-items: start;
+                        .login{
+                            @include Flex($direction:column,$gap:3rem);
+                            h1{
+                                @include Text($color:$purple-color,$font-size:2rem,$font-weight:600);
+                            }
+                            .form{
+                                @include Flex($direction:column,$gap:1.5rem);
+                                input{
+                                    @include Border($border:1px solid $purple-color,$border-radius:0.5rem);
+                                    @include Text($color:$purple-color,$bg-color:transparent,$font-size:1.2rem);
+                                    outline:none;
+                                    padding:1rem;
+                                    font-family: $default-font;
+                                    &::placeholder{
+                                        color:$purple-color;
+                                    }
+                                }
+                                .remember-forget{
+                                    @include Flex($align:center,$justify:space-between);
+                                    .check-box{
+                                        label{
+                                            @include Text($color:$primary-color,$font-size:1rem);
+                                            margin-left: 0.5rem;
+                                        }
+                                    }
+                                    span{
+                                        @include Text($color:$primary-color,$font-size:1rem);
+                                        cursor: pointer;
+                                        &:hover{
+                                            @include Text($color:$purple-color,$text-decoration:underline);
+                                        }
+                                    }
+                                }
+                            }
+                            button{
+                                @extend %button;
+                                width: 100%;
+                                @include Text($color:#fff,$bg-color:$purple-color,$font-size:1.4rem);
+                                padding: 1rem;
+                                &:hover{
+                                    background-color: $orange-color;
+                                }
+                            }
+                        }
+                        .registration{
+                            @extend .login;
+                            .check-box{
+                                @include Flex($align:center,$gap:0.5rem);
+                            }
+                        }
                     }
                 }
             }
@@ -32,6 +94,72 @@ nav{
                     @include Text($color:#fff,$bg-color:$purple-color);
                     padding:2rem;
                     @include Border($border-radius:50%);
+                }
+            }
+            .offcanvas{
+                @include Flex($direction:column,$gap:4rem);
+                padding:3rem;
+                overflow: auto;
+                button{
+                    @include Text($color:$primary-color,$font-size:2.3rem);
+                    @include Transition($minute:.3s);
+                    align-self: end;
+                    &:hover{
+                        color:$purple-color;
+                    }
+                }
+                .about{
+                    .img-container{
+                        width:140px;
+                    }
+                    .paragraph{
+                        @extend %paragraph;
+                        margin-top: 1.5rem;
+                        font-size: 1.6rem;
+                    }
+                }
+                .get-in-touch{
+                    border-top: 1px solid lightgray;
+                    border-bottom: 1px solid lightgray;
+                    padding: 5rem 0;
+                    h1{
+                        @include Text($color:$primary-color,$font-size:2.2rem,$font-weight:600);
+                    }
+                    .contact{
+                        margin-top: 3rem;
+                        @include Flex($gap:2rem,$align:center);
+                        i{
+                            @include Text($color:#fff,$bg-color:$purple-color,$font-size:1.8rem);
+                            padding: 1rem;
+                            border-radius: 50%;
+                        }
+                        .text{
+                            &__headline{
+                                @include Text($color:$secondary-color,$font-size:1.5rem);
+                            }
+                            &__heading{
+                                margin-top: 1rem;
+                                @include Text($color:$primary-color,$font-size:1.7rem);
+                                @include Transition($minute:.3s);
+                                &:hover{
+                                    color:$purple-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .media{
+                    @include Flex($gap:1.5rem);
+                    i{
+                        @include Text($color:$primary-color,$bg-color:lightgray,$font-size:1.5rem);
+                        padding: 1rem;
+                        cursor: pointer;
+                        border-radius: 0.5rem;
+                        @include Transition($minute:.3s);
+                        &:hover{
+                           @include Text($color:#fff,$bg-color:$purple-color);
+                        }
+                    }
                 }
             }
         }
