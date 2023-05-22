@@ -28,14 +28,14 @@
                         @include Border($border:none,$border-radius:0.5rem);
                         @include Text($color:#fff,$bg-color:#FFFFFF12,$font-size:1.6rem);
                         outline:none;
-                        padding:2rem 1.5rem;
+                        padding:2rem 3rem;
                         font-family: $default-font;
                         &::placeholder{
                             color:#ffffffc7;
                         }
                     }
                     .message{
-                        padding:4rem 1.5rem;
+                        padding:4rem 3rem;
                     }
                     button{
                         @extend %button;

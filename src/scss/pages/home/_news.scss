@@ -21,7 +21,7 @@
                 @include Flex($align:center,$gap:3rem);
                 padding:2rem;
                 .img-container{
-                    width:340px;
+                    max-width:340px;
                     img{
                         border-radius: 2rem;
                     }

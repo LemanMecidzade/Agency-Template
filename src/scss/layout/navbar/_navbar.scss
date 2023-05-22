@@ -7,6 +7,9 @@ nav{
     .container{
         .row{
             align-items: center;
+            .logo{
+                max-width: 155px;
+            }
             .menu{
                 @include Flex($align:center,$gap:5rem,$justify:center);
                 a{

@@ -9,7 +9,7 @@ footer{
             .info{
                 @include Flex($direction:column,$gap:3rem);
                 .logo{
-                    width: 130px;
+                    max-width: 130px;
                 }
                 .email{
                     @include Flex($direction:column,$gap:1.5rem);

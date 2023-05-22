@@ -100,7 +100,7 @@ footer .container .row .info .email button, #form .container .row .text .input-g
 }
 
 section, footer {
-  padding: 3% 0;
+  padding: 5% 0;
 }
 
 .container {
@@ -122,11 +122,32 @@ img {
   cursor: pointer;
 }
 
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 35%;
+  }
+  html nav .menu {
+    visibility: hidden;
+  }
+}
 nav {
   background: transparent;
 }
 nav .container .row {
   align-items: center;
+}
+nav .container .row .logo {
+  max-width: 155px;
 }
 nav .container .row .menu {
   display: flex;
@@ -718,7 +739,7 @@ nav .container .row .offcanvas .media i:hover {
   padding: 2rem;
 }
 #news .container .row .card .img-container {
-  width: 340px;
+  max-width: 340px;
 }
 #news .container .row .card .img-container img {
   border-radius: 2rem;
@@ -798,7 +819,7 @@ nav .container .row .offcanvas .media i:hover {
   background-color: rgba(255, 255, 255, 0.0705882353);
   font-size: 1.6rem;
   outline: none;
-  padding: 2rem 1.5rem;
+  padding: 2rem 3rem;
   font-family: "Poppins", sans-serif;
 }
 #form .container .row .text .input-group input::-moz-placeholder {
@@ -808,7 +829,7 @@ nav .container .row .offcanvas .media i:hover {
   color: rgba(255, 255, 255, 0.7803921569);
 }
 #form .container .row .text .input-group .message {
-  padding: 4rem 1.5rem;
+  padding: 4rem 3rem;
 }
 #form .container .row .text .input-group button {
   width: 100%;
@@ -844,7 +865,7 @@ footer .container .row .info {
   gap: 3rem;
 }
 footer .container .row .info .logo {
-  width: 130px;
+  max-width: 130px;
 }
 footer .container .row .info .email {
   display: flex;
