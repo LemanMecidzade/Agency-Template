@@ -18,22 +18,26 @@
                 }
             }
             .accordion{
+                margin-top: 5rem;
                 .accordion-item{
                     @include Border ($border:none,$border-radius:2rem);
                     box-shadow: 0 0 10px 15px #f0f0f07e;
                     margin-top: 2rem;
                     button{
-                        @include Text($color:$primary-color,$font-size:2rem,$bg-color:transparent);
+                        @include Text($color:$primary-color,$font-size:2rem,$bg-color:transparent,$text-transform:capitalize);
                         padding:2rem;
                         @include Border($border:none,$border-radius:1rem);
                         @include Transition($minute:.3s);
-                        &:hover{
-                            color:$orange-color;
-                        }
+                        box-shadow: none;
                     }
                     .accordion-body{
                         padding: 1.5rem;
                         @include Text($color:$secondary-color,$font-size:1.5rem);
+                    }
+                    &:hover{
+                        button{
+                            color:$orange-color;
+                        }
                     }
                 }
             }

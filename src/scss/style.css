@@ -625,6 +625,9 @@ nav .container .row .offcanvas .media i:hover {
 #work-process .container .row .text__heading {
   max-width: 60rem;
 }
+#work-process .container .row .accordion {
+  margin-top: 5rem;
+}
 #work-process .container .row .accordion .accordion-item {
   border: none;
   border-radius: 2rem;
@@ -635,18 +638,20 @@ nav .container .row .offcanvas .media i:hover {
   color: #19082D;
   background-color: transparent;
   font-size: 2rem;
+  text-transform: capitalize;
   padding: 2rem;
   border: none;
   border-radius: 1rem;
   transition: 0.3s ease-in-out;
-}
-#work-process .container .row .accordion .accordion-item button:hover {
-  color: #FF7425;
+  box-shadow: none;
 }
 #work-process .container .row .accordion .accordion-item .accordion-body {
   padding: 1.5rem;
   color: #3E3E3E;
   font-size: 1.5rem;
+}
+#work-process .container .row .accordion .accordion-item:hover button {
+  color: #FF7425;
 }
 
 #testimonial .container .text__headline {
@@ -677,7 +682,7 @@ nav .container .row .offcanvas .media i:hover {
   gap: 3rem;
 }
 #testimonial .container .row .card__bottom .img-container {
-  width: 60px;
+  max-width: 60px;
 }
 #testimonial .container .row .card__bottom .about {
   display: flex;

@@ -31,7 +31,7 @@
                 &__bottom{
                     @include Flex($align:center,$gap:3rem);
                     .img-container{
-                        width:60px;
+                        max-width:60px;
                     }
                     .about{
                         @include Flex($direction:column,$justify:center,$gap:1rem);
